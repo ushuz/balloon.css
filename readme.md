@@ -1,10 +1,9 @@
 <img src="logo.png" width="272" style="margin:0 auto" align="center" />
 
-# Balloon.css
 ## Simple tooltips made of pure CSS
 Balloon.css lets you add tooltips to elements without JavaScript and in just a few lines of CSS.
 
-![](sample.gif)
+<img src="sample.gif" width="310" />
 
 ## Usage
 ### Positioning
