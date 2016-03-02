@@ -163,6 +163,8 @@ $balloon-arrow-height:   6px;
 
     &[data-balloon-pos="right"] {
         &::before {
+
+            top: 50%;
             left: 100%;
             margin-left: 5px + $balloon-arrow-height;
             transform: translate3d(-10px, -50%, 0);
@@ -171,6 +173,7 @@ $balloon-arrow-height:   6px;
         &::after {
             @include svg-arrow($balloon-bg, "right");
 
+            top: 50%;
             left: 100%;
             margin-left: 5px;
             transform: translate3d(-10px, -50%, 0);
