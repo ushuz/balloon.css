@@ -96,6 +96,7 @@
   transform: translate3d(0, -50%, 0);
 }
 [data-balloon][data-balloon-pos="right"]::before {
+  top: 50%;
   left: 100%;
   margin-left: 11px;
   transform: translate3d(-10px, -50%, 0);
@@ -105,6 +106,7 @@
   background-size: 100% auto;
   width: 6px;
   height: 18px;
+  top: 50%;
   left: 100%;
   margin-left: 5px;
   transform: translate3d(-10px, -50%, 0);
