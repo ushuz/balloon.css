@@ -187,4 +187,51 @@ $balloon-arrow-height:   6px;
             transform: translate3d(0, -50%, 0);
         }
     }
+
+    &[data-balloon-length="small"] {
+        &::before {
+            width: 80px;
+            white-space: normal;
+        }
+    }
+
+    &[data-balloon-length="medium"] {
+        &::before {
+            width: 150px;
+            white-space: normal;
+        }
+    }
+
+    &[data-balloon-length="large"] {
+        &::before {
+            width: 260px;
+            white-space: normal;
+        }
+    }
+
+    &[data-balloon-length="xlarge"] {
+        &::before {
+            width: 380px;
+            white-space: normal;
+        }
+    }
+
+    &[data-balloon-length="fit"] {
+        &::before {
+            width: 100%;
+            white-space: normal;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    [data-balloon] {
+        &[data-balloon-length="xlarge"] {
+            &::before {
+                width: 90vw;
+                white-space: normal;
+            }
+        }
+    }
 }
