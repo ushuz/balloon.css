@@ -1,4 +1,4 @@
-![Balloon.css](logo.svg)
+<img src="logo.png" width="272" style="margin:0 auto" align="center" />
 
 # Balloon.css
 ## Simple tooltips made of pure CSS
