@@ -98,13 +98,16 @@ $balloon-arrow-height:   6px;
             transform-origin: top;
         }
 
-        &:hover::before {
-            transform: translate3d(-50%, 0, 0);
+        &:hover {
+            &::before {
+                transform: translate3d(-50%, 0, 0);
+            }
+
+            &::after {
+                transform: translate3d(-50%, 0, 0);
+            }
         }
 
-        &:hover::after {
-            transform: translate3d(-50%, 0, 0);
-        }
     }
 
     &[data-balloon-pos='down'] {
@@ -124,12 +127,14 @@ $balloon-arrow-height:   6px;
             transform: translate3d(-50%, -10px, 0);
         }
 
-        &:hover::before {
-            transform: translate3d(-50%, 0, 0);
-        }
+        &:hover {
+            &::before {
+                transform: translate3d(-50%, 0, 0);
+            }
 
-        &:hover::after {
-            transform: translate3d(-50%, 0, 0);
+            &::after {
+                transform: translate3d(-50%, 0, 0);
+            }
         }
     }
 
@@ -150,13 +155,16 @@ $balloon-arrow-height:   6px;
             transform: translate3d(10px, -50%, 0);
         }
 
-        &:hover::before {
-            transform: translate3d(0, -50%, 0);
+        &:hover {
+            &::before {
+                transform: translate3d(0, -50%, 0);
+            }
+
+            &::after {
+                transform: translate3d(0, -50%, 0);
+            }
         }
 
-        &:hover::after {
-            transform: translate3d(0, -50%, 0);
-        }
     }
 
     &[data-balloon-pos='right'] {
@@ -177,12 +185,14 @@ $balloon-arrow-height:   6px;
             transform: translate3d(-10px, -50%, 0);
         }
 
-        &:hover::before {
-            transform: translate3d(0, -50%, 0);
-        }
+        &:hover {
+            &::before {
+                transform: translate3d(0, -50%, 0);
+            }
 
-        &:hover::after {
-            transform: translate3d(0, -50%, 0);
+            &::after {
+                transform: translate3d(0, -50%, 0);
+            }
         }
     }
 
@@ -211,6 +221,11 @@ $balloon-arrow-height:   6px;
         &::before {
             white-space: normal;
             width: 380px;
+
+            @media screen and (max-width: 768px) {
+                white-space: normal;
+                width: 90vw;
+            }
         }
     }
 
@@ -218,18 +233,6 @@ $balloon-arrow-height:   6px;
         &::before {
             white-space: normal;
             width: 100%;
-        }
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    [data-balloon] {
-        &[data-balloon-length='xlarge'] {
-            &::before {
-                white-space: normal;
-                width: 90vw;
-            }
         }
     }
 }
