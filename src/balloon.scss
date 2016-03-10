@@ -11,7 +11,7 @@ $balloon-arrow-height:   6px;
 // Mixins
 // -----------------------------------------
 
-@mixin svg-arrow($color, $position: up) {
+@mixin svg-arrow ($color, $position: up) {
 
     $degrees: 0;
     $height:  6px;
@@ -35,10 +35,12 @@ $balloon-arrow-height:   6px;
     height: $height;
 }
 
-@mixin base-effects() {
-    opacity: 0;
-    pointer-events: none;
-    transition: all .18s ease-out;
+@mixin transition ($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
 
 @mixin transform ($val) {
@@ -54,6 +56,13 @@ $balloon-arrow-height:   6px;
   -ms-transform-origin: $val;
   transform-origin: $val;
 }
+
+@mixin base-effects () {
+    opacity: 0;
+    pointer-events: none;
+    @include transition(all .18s ease-out);
+}
+
 
 //
 // Styles
