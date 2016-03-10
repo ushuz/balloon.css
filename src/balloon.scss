@@ -57,8 +57,16 @@ $balloon-arrow-height:   6px;
   transform-origin: $val;
 }
 
+@mixin opacity ($trans) {
+  filter: alpha(opactiy=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
 @mixin base-effects () {
-    opacity: 0;
+    @include opacity(0);
     pointer-events: none;
     @include transition(all .18s ease-out);
 }
@@ -98,7 +106,7 @@ $balloon-arrow-height:   6px;
     &:hover {
         &::before,
         &::after {
-            opacity: 1;
+            @include opacity(1);
             pointer-events: auto;
         }
     }
