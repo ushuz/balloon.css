@@ -44,10 +44,10 @@ $balloon-arrow-height:   6px;
 }
 
 @mixin transform ($val) {
-  -webkit-transform($val);
-  -moz-transform($val);
-  -ms-transform($val);
-  transform($val);
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
 }
 
 @mixin transform-origin ($val) {
