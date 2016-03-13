@@ -31,7 +31,7 @@ Example using [Font Awesome](https://fortawesome.github.io/Font-Awesome/):
 ```
 
 ### Contributing
-Balloon.css have is mantained in SASS and LESS. To contribute with bugfixes and enchancements you must follow this steps:
+Balloon.css is mantained in SASS and LESS. To contribute with bugfixes and enchancements you must follow this steps:
 
 1. Clone repo. E.g. `git clone https://github.com/kazzkiq/balloon.css.git`
 2. Run `npm install`
@@ -39,6 +39,7 @@ Balloon.css have is mantained in SASS and LESS. To contribute with bugfixes and 
 4. Make sure to test the production files over the website (branch `gh-pages`) before submitting a Pull Request.
 
 Note 1: Remember to update **both SASS and LESS** files after your changes (both must always be in sync).
+
 Note 2: You're not obligated to use the built-in tasks from the above steps. If you're using your own build, just make sure to update production and source files before submitting a PR.
 
 
