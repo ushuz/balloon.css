@@ -1,6 +1,6 @@
 {
   "name": "balloon-css",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Simple tooltips made of pure CSS",
   "author": "Claudio Holanda",
   "license": "MIT",
@@ -14,6 +14,7 @@
   ],
   "main": "src/balloon.scss",
   "scripts": {
+    "build-all": "npm run build-sass && npm run build-less",
     "build-sass": "node-sass src/balloon.scss ./balloon.css && node-sass src/balloon.scss ./balloon.min.css --output-style compressed",
     "build-less": "lessc src/balloon.less ./balloon.css && lessc --clean-css src/balloon.less ./balloon.min.css",
     "watch-sass": "node-sass --watch src/balloon.scss src/balloon.css"
