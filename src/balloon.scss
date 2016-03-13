@@ -111,6 +111,10 @@ $balloon-arrow-height:   6px;
         }
     }
 
+    &[data-balloon-break] {
+        white-space: normal;
+    }
+
     &[data-balloon-pos="up"] {
         &::before {
             bottom: 100%;
