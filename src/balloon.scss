@@ -104,11 +104,15 @@ $balloon-arrow-height:   6px;
     }
 
     &:hover {
-        &::before,
-        &::after {
+        &:before,
+        &:after {
             @include opacity(1);
             pointer-events: auto;
         }
+    }
+
+    &[data-balloon-break] {
+        white-space: normal;
     }
 
     &[data-balloon-pos="up"] {
@@ -119,7 +123,6 @@ $balloon-arrow-height:   6px;
             @include transform(translate3d(-50%, 10px, 0));
             @include transform-origin(top);
         }
-
         &::before {
             bottom: 100%;
             left: 50%;
@@ -234,7 +237,7 @@ $balloon-arrow-height:   6px;
     }
 
     &[data-balloon-length='medium'] {
-        &::before {
+        &:before {
             white-space: normal;
             width: 150px;
         }
