@@ -47,7 +47,7 @@
     -khtml-opacity: 1;
     opacity: 1;
     pointer-events: auto; }
-  [data-balloon][data-balloon-break] {
+  [data-balloon][data-balloon-break]:before {
     white-space: normal; }
   [data-balloon][data-balloon-pos="up"]:before {
     bottom: 100%;
