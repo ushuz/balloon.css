@@ -112,7 +112,9 @@ $balloon-arrow-height:   6px;
     }
 
     &[data-balloon-break] {
-        white-space: normal;
+        &:before {
+            white-space: normal;
+        }
     }
 
     &[data-balloon-pos="up"] {
