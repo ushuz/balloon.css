@@ -50,7 +50,8 @@
   -khtml-opacity: 1;
   opacity: 1;
   pointer-events: auto;
-  [data-balloon][data-balloon-break]:before {
+}
+[data-balloon][data-balloon-break]:after {
   white-space: normal;
 }
 [data-balloon][data-balloon-pos="up"]::after {
