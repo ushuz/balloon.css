@@ -15,9 +15,9 @@
   left: 50%;
   position: absolute;
   z-index: 10;
-  -webkit-transform: translate3d(-50%, 10px, 0);
-  -ms-transform: translate3d(-50%, 10px, 0);
-  transform: translate3d(-50%, 10px, 0);
+  -webkit-transform: translate(-50%, 10px);
+  -ms-transform: translate(-50%, 10px);
+  transform: translate(-50%, 10px);
   -webkit-transform-origin: top;
   -ms-transform-origin: top;
   transform-origin: top;
@@ -48,9 +48,9 @@
   -moz-opacity: 1;
   opacity: 1;
   pointer-events: auto;
-  -webkit-transform: translate3d(-50%, 0, 0);
-  -ms-transform: translate3d(-50%, 0, 0);
-  transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 [data-balloon][data-balloon-break]:after {
   white-space: normal;
@@ -60,9 +60,9 @@
   bottom: auto;
   left: 50%;
   top: 100%;
-  -webkit-transform: translate3d(-50%, -10px, 0);
-  -ms-transform: translate3d(-50%, -10px, 0);
-  transform: translate3d(-50%, -10px, 0);
+  -webkit-transform: translate(-50%, -10px);
+  -ms-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
 }
 [data-balloon-pos="down"]:after {
   margin-top: 11px;
@@ -77,9 +77,9 @@
 }
 [data-balloon-pos="down"]:hover:before,
 [data-balloon-pos="down"]:hover:after {
-  -webkit-transform: translate3d(-50%, 0, 0);
-  -ms-transform: translate3d(-50%, 0, 0);
-  transform: translate3d(-50%, 0, 0);
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }
 [data-balloon-pos="left"]:before,
 [data-balloon-pos="left"]:after {
@@ -87,9 +87,9 @@
   left: auto;
   right: 100%;
   top: 50%;
-  -webkit-transform: translate3d(10px, -50%, 0);
-  -ms-transform: translate3d(10px, -50%, 0);
-  transform: translate3d(10px, -50%, 0);
+  -webkit-transform: translate(10px, -50%);
+  -ms-transform: translate(10px, -50%);
+  transform: translate(10px, -50%);
 }
 [data-balloon-pos="left"]:after {
   margin-right: 11px;
@@ -104,18 +104,18 @@
 }
 [data-balloon-pos="left"]:hover:before,
 [data-balloon-pos="left"]:hover:after {
-  -webkit-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 [data-balloon-pos="right"]:before,
 [data-balloon-pos="right"]:after {
   bottom: auto;
   left: 100%;
   top: 50%;
-  -webkit-transform: translate3d(-10px, -50%, 0);
-  -ms-transform: translate3d(-10px, -50%, 0);
-  transform: translate3d(-10px, -50%, 0);
+  -webkit-transform: translate(-10px, -50%);
+  -ms-transform: translate(-10px, -50%);
+  transform: translate(-10px, -50%);
 }
 [data-balloon-pos="right"]:after {
   margin-left: 11px;
@@ -130,9 +130,9 @@
 }
 [data-balloon-pos="right"]:hover:before,
 [data-balloon-pos="right"]:hover:after {
-  -webkit-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
 [data-balloon-length]:after {
   white-space: normal;
