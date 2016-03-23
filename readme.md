@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/balloon-css.svg)](https://www.npmjs.com/package/balloon-css)
+
 <img src="logo.png" width="272" style="margin:0 auto" align="center" />
 
 ## Simple tooltips made of pure CSS
