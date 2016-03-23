@@ -8,6 +8,21 @@ Balloon.css lets you add tooltips to elements without JavaScript and in just a f
 <img src="sample.gif" width="310" />
 
 ## Usage
+
+### Installation
+
+**Using npm:**
+```
+npm install balloon-css
+```
+
+**Manually:**
+Simply download `balloon.min.css` from this repo and add it to your HTML. e.g.
+
+```html
+<link rel="stylesheet" href="path/to/balloon.min.css">
+```
+
 ### Positioning
 For positioning, use `data-balloon-pos` attribute with one of the values: `up`, `down`, `left` or `right`:
 
