@@ -131,7 +131,6 @@ $balloon-arrow-height:   6px;
             margin-bottom: 5px;
             @include transform(translate(-50%, 10px));
             @include transform-origin(top);
-            box-shadow: inset 0 -1px 2px 0 rgba(red, 1);
         }
 
         &:hover {
