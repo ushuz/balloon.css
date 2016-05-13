@@ -23,6 +23,11 @@ Simply download `balloon.min.css` from this repo and add it to your HTML. e.g.
 <link rel="stylesheet" href="path/to/balloon.min.css">
 ```
 
+**CDN version (provided by cdnjs):**
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.2.4/balloon.min.css">
+```
+
 ### Positioning
 For positioning, use `data-balloon-pos` attribute with one of the values: `up`, `down`, `left` or `right`:
 
