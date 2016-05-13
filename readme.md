@@ -16,16 +16,16 @@ Balloon.css lets you add tooltips to elements without JavaScript and in just a f
 npm install balloon-css
 ```
 
+**CDN version (provided by [cdnjs](https://github.com/cdnjs/cdnjs)):**
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.2.4/balloon.min.css">
+```
+
 **Manually:**
 Simply download `balloon.min.css` from this repo and add it to your HTML. e.g.
 
 ```html
 <link rel="stylesheet" href="path/to/balloon.min.css">
-```
-
-**CDN version (provided by cdnjs):**
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.2.4/balloon.min.css">
 ```
 
 ### Positioning
