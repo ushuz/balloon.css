@@ -239,7 +239,7 @@ $balloon-arrow-height:   6px;
     }
 
     &[data-balloon-length='medium'] {
-        &:before {
+        &:after {
             white-space: normal;
             width: 150px;
         }
