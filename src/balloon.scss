@@ -76,6 +76,10 @@ $balloon-arrow-height:   6px;
 // Styles
 // -----------------------------------------
 
+// IE 11 button bugfix
+button[data-balloon] {
+    overflow: visible;
+}
 
 [data-balloon] {
     position: relative; // alt. absolute or fixed
