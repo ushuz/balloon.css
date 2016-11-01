@@ -38,6 +38,17 @@ For positioning, use `data-balloon-pos` attribute with one of the values: `up`, 
 <button data-balloon="Whats up!" data-balloon-pos="down">Hover me!</button>
 ```
 
+### Showing tooltips programatically
+If you want to show tooltips even when user interaction isn't happening, you can simply use the `data-balloon-visible` attribute:
+
+```html
+<button data-balloon="Whats up!" data-balloon-pos="up" id="show-tip">Hover me!</button>
+<script>
+  const btn = document.getElementById('show-tip')
+  btn.setAttribute('data-balloon-visible', '')
+</script>
+```
+
 ### Glyphs and Icon Fonts
 You can also add any HTML special character to your tooltips, or even use third-party Icon fonts:
 
