@@ -127,6 +127,10 @@ button[data-balloon] {
         }
     }
 
+    &.font-awesome:after {
+        font-family: FontAwesome;
+    }
+
     &[data-balloon-break] {
         &:after {
             white-space: normal;
@@ -153,7 +157,7 @@ button[data-balloon] {
     &:hover, &[data-balloon-visible] {
         &:before,
         &:after {
-          .transform(translate(-50%, 0)); 
+          .transform(translate(-50%, 0));
         }
     }
 }
@@ -178,7 +182,7 @@ button[data-balloon] {
     &:hover, &[data-balloon-visible] {
         &:before,
         &:after {
-          .transform(translate(0, -50%)); 
+          .transform(translate(0, -50%));
         }
     }
 }
@@ -202,7 +206,7 @@ button[data-balloon] {
     &:hover, &[data-balloon-visible] {
         &:before,
         &:after {
-          .transform(translate(0, -50%)); 
+          .transform(translate(0, -50%));
         }
     }
 }
