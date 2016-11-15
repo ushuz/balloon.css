@@ -7,6 +7,11 @@ Balloon.css lets you add tooltips to elements without JavaScript and in just a f
 
 <img src="sample.gif" width="310" />
 
+## Demo & Playground
+
+You can play with Balloon.css here: https://jsfiddle.net/9fboea3u/
+You also can check more examples at the website: http://kazzkiq.github.io/balloon.css/
+
 ## Usage
 
 ### Installation
