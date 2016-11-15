@@ -115,6 +115,10 @@ button[data-balloon] {
         }
     }
 
+    &.font-awesome:after {
+        font-family: FontAwesome;
+    }
+
     &[data-balloon-break] {
         &:after {
             white-space: normal;
