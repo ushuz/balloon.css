@@ -61,7 +61,7 @@ button[data-balloon] {
   font-family: FontAwesome;
 }
 [data-balloon][data-balloon-break]:after {
-  white-space: normal;
+  white-space: pre;
 }
 [data-balloon-pos="down"]:before,
 [data-balloon-pos="down"]:after {
