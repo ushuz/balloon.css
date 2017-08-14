@@ -75,6 +75,14 @@ $balloon-arrow-height:   6px;
   @include transition(none);
 }
 
+@mixin normalized-text() {
+  font-family: sans-serif !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-shadow: none !important;
+  font-size: $balloon-base-size + 2 !important;
+}
+
 
 //
 // Styles
@@ -94,12 +102,11 @@ button[data-balloon] {
 
   &:after {
     @include base-effects();
-
+    @include normalized-text();
     background: $balloon-bg;
     border-radius: 4px;
     color: #fff;
     content: attr(data-balloon);
-    font-size: $balloon-base-size + 2;
     padding: .5em 1em;
     position: absolute;
     white-space: nowrap;

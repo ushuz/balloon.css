@@ -85,6 +85,14 @@
   .transition(none);
 }
 
+.normalized-text() {
+  font-family: sans-serif !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  text-shadow: none !important;
+  font-size: @balloon-font-size !important;
+}
+
 
 //
 // Styles
@@ -113,11 +121,11 @@ button[data-balloon] {
     .transform-origin(top);
   }
   &:after {
+    .normalized-text();
     background: @balloon-bg;
     border-radius: @balloon-font-size / 3;
     color: #fff;
     content: attr(data-balloon);
-    font-size: @balloon-font-size;
     padding: .5em 1em;
     white-space: nowrap;
     margin-bottom: @balloon-arrow-size + 5;
