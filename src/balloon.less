@@ -186,6 +186,56 @@ button[data-balloon] {
   }
 }
 
+[data-balloon-pos="down-left"] {
+  &:before,
+  &:after {
+    bottom: auto;
+    left: 0;
+    top: 100%;
+    .transform(translate(0, -10px));
+  }
+  &:after {
+    margin-top: @balloon-arrow-size + 5;
+  }
+  &:before {
+    .svg-arrow(@balloon-bg, down);
+    margin-top: @balloon-arrow-size - 1;
+    margin-bottom: 0;
+    left: 5px;
+  }
+  &:hover, &[data-balloon-visible] {
+    &:before,
+    &:after {
+      .transform(translate(0, 0));
+    }
+  }
+}
+
+[data-balloon-pos="down-right"] {
+  &:before,
+  &:after {
+    bottom: auto;
+    right: 0;
+    top: 100%;
+    .transform(translate(0, -10px));
+  }
+  &:after {
+    margin-top: @balloon-arrow-size + 5;
+  }
+  &:before {
+    .svg-arrow(@balloon-bg, down);
+    margin-top: @balloon-arrow-size - 1;
+    margin-bottom: 0;
+    right: 5px;
+  }
+  &:hover, &[data-balloon-visible] {
+    &:before,
+    &:after {
+      .transform(translate(0, 0));
+    }
+  }
+}
+
 [data-balloon-pos="left"] {
   &:before,
   &:after {
