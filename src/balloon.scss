@@ -84,6 +84,10 @@ button[data-balloon] {
 [data-balloon] {
     position: relative; // alt. absolute or fixed
 
+    // Fixing iOS Safari event issue.
+    // More info at: https://goo.gl/w8JF4W
+    cursor: pointer;
+
     &:after {
         @include base-effects();
 
