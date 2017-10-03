@@ -35,13 +35,18 @@ Simply download `balloon.min.css` from this repo and add it to your HTML. e.g.
 ```
 
 ### Positioning
-For positioning, use `data-balloon-pos` attribute with one of the values: `up`, `down`, `left` or `right`:
+For positioning, use `data-balloon-pos` attribute with one of the values: `up`, `down`, `left`, `right`, `up-left`, `up-right`, `down-left` or `down-right`:
 
 ```html
 <button data-balloon="Whats up!" data-balloon-pos="up">Hover me!</button>
 <button data-balloon="Whats up!" data-balloon-pos="left">Hover me!</button>
 <button data-balloon="Whats up!" data-balloon-pos="right">Hover me!</button>
 <button data-balloon="Whats up!" data-balloon-pos="down">Hover me!</button>
+
+<button data-balloon="Whats up!" data-balloon-pos="up-left">Hover me!</button>
+<button data-balloon="Whats up!" data-balloon-pos="up-right">Hover me!</button>
+<button data-balloon="Whats up!" data-balloon-pos="down-left">Hover me!</button>
+<button data-balloon="Whats up!" data-balloon-pos="down-right">Hover me!</button>
 ```
 
 ### Showing tooltips programatically
