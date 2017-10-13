@@ -24,7 +24,7 @@ npm install balloon-css
 
 **CDN version (provided by [cdnjs](https://github.com/cdnjs/cdnjs)):**
 ```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.2.4/balloon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
 ```
 
 **Manually:**
