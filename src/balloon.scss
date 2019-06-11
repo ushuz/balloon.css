@@ -158,7 +158,7 @@ button[data-balloon] {
   }
 
   &.font-awesome:after {
-    font-family: FontAwesome;
+    font-family: FontAwesome, sans-serif !important;
   }
 
   &[data-balloon-break] {
