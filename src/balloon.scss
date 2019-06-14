@@ -65,11 +65,11 @@ $balloon-move:           4px;
 // -----------------------------------------
 
 // IE 11 button bugfix
-button[data-balloon] {
+button[aria-label] {
   overflow: visible;
 }
 
-[data-balloon] {
+[aria-label] {
   position: relative; // alt. absolute or fixed
 
   // Fixing iOS Safari event issue.
@@ -79,10 +79,11 @@ button[data-balloon] {
   &:after {
     @include base-effects();
     @include normalized-text();
+
     background: $balloon-bg;
     border-radius: 2px;
     color: #fff;
-    content: attr(data-balloon);
+    content: attr(aria-label);
     padding: .5em 1em;
     position: absolute;
     white-space: nowrap;
@@ -98,7 +99,7 @@ button[data-balloon] {
     z-index: 10;
   }
 
-  &:hover, &[data-balloon-visible] {
+  &:hover, &[data-balloon-visible], &:not([data-balloon-nofocus]):focus {
     &:before,
     &:after {
       opacity: 1;      
@@ -107,29 +108,29 @@ button[data-balloon] {
   }
   
   &:not([data-balloon-pos]) {
+    &:after {
+      bottom: 100%;
+      left: 50%;
+      margin-bottom: 5px + $balloon-arrow-size;
+      transform: translate(-50%, $balloon-move);
+      transform-origin: top;
+    }
+    &:before {
+      bottom: 100%;
+      left: 50%;
+      transform: translate(-50%, $balloon-move);
+      transform-origin: top;
+    }
+
+    &:hover, &[data-balloon-visible] {
       &:after {
-        bottom: 100%;
-        left: 50%;
-        margin-bottom: 5px + $balloon-arrow-size;
-        transform: translate(-50%, $balloon-move);
-        transform-origin: top;
+        transform: translate(-50%, 0);
       }
+
       &:before {
-        bottom: 100%;
-        left: 50%;
-        transform: translate(-50%, $balloon-move);
-        transform-origin: top;
+        transform: translate(-50%, 0);
       }
-
-      &:hover, &[data-balloon-visible] {
-        &:after {
-          transform: translate(-50%, 0);
-        }
-
-        &:before {
-          transform: translate(-50%, 0);
-        }
-      }
+    }
   }
 
   &.font-awesome:after {
@@ -324,6 +325,7 @@ button[data-balloon] {
 
     &:before {
       @include arrow-right();
+
       right: 100%;
       top: 50%;
       transform: translate($balloon-move, -50%);
@@ -352,6 +354,7 @@ button[data-balloon] {
 
     &:before {
       @include arrow-left();
+
       left: 100%;
       top: 50%;
       transform: translate($balloon-move * -1, -50%);

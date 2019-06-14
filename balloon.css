@@ -1,10 +1,10 @@
-button[data-balloon] {
+button[aria-label] {
   overflow: visible; }
 
-[data-balloon] {
+[aria-label] {
   position: relative;
   cursor: pointer; }
-  [data-balloon]:after {
+  [aria-label]:after {
     opacity: 0;
     pointer-events: none;
     transition: all .18s ease-out .18s;
@@ -17,12 +17,12 @@ button[data-balloon] {
     background: rgba(16, 16, 16, 0.95);
     border-radius: 2px;
     color: #fff;
-    content: attr(data-balloon);
+    content: attr(aria-label);
     padding: .5em 1em;
     position: absolute;
     white-space: nowrap;
     z-index: 10; }
-  [data-balloon]:before {
+  [aria-label]:before {
     width: 0;
     height: 0;
     border: 5px solid transparent;
@@ -33,81 +33,84 @@ button[data-balloon] {
     content: "";
     position: absolute;
     z-index: 10; }
-  [data-balloon]:hover:before, [data-balloon]:hover:after, [data-balloon][data-balloon-visible]:before, [data-balloon][data-balloon-visible]:after {
+  [aria-label]:hover:before, [aria-label]:hover:after, [aria-label][data-balloon-visible]:before, [aria-label][data-balloon-visible]:after, [aria-label]:not([data-balloon-nofocus]):focus:before, [aria-label]:not([data-balloon-nofocus]):focus:after {
     opacity: 1;
     pointer-events: none; }
-  [data-balloon]:not([data-balloon-pos]):after {
+  [aria-label]:not([data-balloon-pos]):after {
     bottom: 100%;
     left: 50%;
     margin-bottom: 10px;
     transform: translate(-50%, 4px);
     transform-origin: top; }
-  [data-balloon]:not([data-balloon-pos]):before {
+  [aria-label]:not([data-balloon-pos]):before {
     bottom: 100%;
     left: 50%;
     transform: translate(-50%, 4px);
     transform-origin: top; }
-  [data-balloon]:not([data-balloon-pos]):hover:after, [data-balloon]:not([data-balloon-pos])[data-balloon-visible]:after {
+  [aria-label]:not([data-balloon-pos]):hover:after, [aria-label]:not([data-balloon-pos])[data-balloon-visible]:after {
     transform: translate(-50%, 0); }
-  [data-balloon]:not([data-balloon-pos]):hover:before, [data-balloon]:not([data-balloon-pos])[data-balloon-visible]:before {
+  [aria-label]:not([data-balloon-pos]):hover:before, [aria-label]:not([data-balloon-pos])[data-balloon-visible]:before {
     transform: translate(-50%, 0); }
-  [data-balloon].font-awesome:after {
+  [aria-label].font-awesome:after {
     font-family: FontAwesome, sans-serif !important; }
-  [data-balloon][data-balloon-break]:after {
+  [aria-label][data-balloon-break]:after {
     white-space: pre; }
-  [data-balloon][data-balloon-blunt]:before, [data-balloon][data-balloon-blunt]:after {
+  [aria-label][data-balloon-break][data-balloon-length]:after {
+    white-space: pre-line;
+    word-break: break-word; }
+  [aria-label][data-balloon-blunt]:before, [aria-label][data-balloon-blunt]:after {
     transition: none; }
-  [data-balloon][data-balloon-pos="up"]:after {
+  [aria-label][data-balloon-pos="up"]:after {
     bottom: 100%;
     left: 50%;
     margin-bottom: 10px;
     transform: translate(-50%, 4px);
     transform-origin: top; }
-  [data-balloon][data-balloon-pos="up"]:before {
+  [aria-label][data-balloon-pos="up"]:before {
     bottom: 100%;
     left: 50%;
     transform: translate(-50%, 4px);
     transform-origin: top; }
-  [data-balloon][data-balloon-pos="up"]:hover:after, [data-balloon][data-balloon-pos="up"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="up"]:hover:after, [aria-label][data-balloon-pos="up"][data-balloon-visible]:after {
     transform: translate(-50%, 0); }
-  [data-balloon][data-balloon-pos="up"]:hover:before, [data-balloon][data-balloon-pos="up"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="up"]:hover:before, [aria-label][data-balloon-pos="up"][data-balloon-visible]:before {
     transform: translate(-50%, 0); }
-  [data-balloon][data-balloon-pos="up-left"]:after {
+  [aria-label][data-balloon-pos="up-left"]:after {
     bottom: 100%;
     left: 0;
     margin-bottom: 10px;
     transform: translate(0, 4px);
     transform-origin: top; }
-  [data-balloon][data-balloon-pos="up-left"]:before {
+  [aria-label][data-balloon-pos="up-left"]:before {
     bottom: 100%;
     left: 5px;
     transform: translate(0, 4px);
     transform-origin: top; }
-  [data-balloon][data-balloon-pos="up-left"]:hover:after, [data-balloon][data-balloon-pos="up-left"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="up-left"]:hover:after, [aria-label][data-balloon-pos="up-left"][data-balloon-visible]:after {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="up-left"]:hover:before, [data-balloon][data-balloon-pos="up-left"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="up-left"]:hover:before, [aria-label][data-balloon-pos="up-left"][data-balloon-visible]:before {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="up-right"]:after {
+  [aria-label][data-balloon-pos="up-right"]:after {
     bottom: 100%;
     right: 0;
     margin-bottom: 10px;
     transform: translate(0, 4px);
     transform-origin: top; }
-  [data-balloon][data-balloon-pos="up-right"]:before {
+  [aria-label][data-balloon-pos="up-right"]:before {
     bottom: 100%;
     right: 5px;
     transform: translate(0, 4px);
     transform-origin: top; }
-  [data-balloon][data-balloon-pos="up-right"]:hover:after, [data-balloon][data-balloon-pos="up-right"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="up-right"]:hover:after, [aria-label][data-balloon-pos="up-right"][data-balloon-visible]:after {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="up-right"]:hover:before, [data-balloon][data-balloon-pos="up-right"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="up-right"]:hover:before, [aria-label][data-balloon-pos="up-right"][data-balloon-visible]:before {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="down"]:after {
+  [aria-label][data-balloon-pos="down"]:after {
     left: 50%;
     margin-top: 10px;
     top: 100%;
     transform: translate(-50%, -4px); }
-  [data-balloon][data-balloon-pos="down"]:before {
+  [aria-label][data-balloon-pos="down"]:before {
     width: 0;
     height: 0;
     border: 5px solid transparent;
@@ -115,16 +118,16 @@ button[data-balloon] {
     left: 50%;
     top: 100%;
     transform: translate(-50%, -4px); }
-  [data-balloon][data-balloon-pos="down"]:hover:after, [data-balloon][data-balloon-pos="down"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="down"]:hover:after, [aria-label][data-balloon-pos="down"][data-balloon-visible]:after {
     transform: translate(-50%, 0); }
-  [data-balloon][data-balloon-pos="down"]:hover:before, [data-balloon][data-balloon-pos="down"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="down"]:hover:before, [aria-label][data-balloon-pos="down"][data-balloon-visible]:before {
     transform: translate(-50%, 0); }
-  [data-balloon][data-balloon-pos="down-left"]:after {
+  [aria-label][data-balloon-pos="down-left"]:after {
     left: 0;
     margin-top: 10px;
     top: 100%;
     transform: translate(0, -4px); }
-  [data-balloon][data-balloon-pos="down-left"]:before {
+  [aria-label][data-balloon-pos="down-left"]:before {
     width: 0;
     height: 0;
     border: 5px solid transparent;
@@ -132,16 +135,16 @@ button[data-balloon] {
     left: 5px;
     top: 100%;
     transform: translate(0, -4px); }
-  [data-balloon][data-balloon-pos="down-left"]:hover:after, [data-balloon][data-balloon-pos="down-left"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="down-left"]:hover:after, [aria-label][data-balloon-pos="down-left"][data-balloon-visible]:after {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="down-left"]:hover:before, [data-balloon][data-balloon-pos="down-left"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="down-left"]:hover:before, [aria-label][data-balloon-pos="down-left"][data-balloon-visible]:before {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="down-right"]:after {
+  [aria-label][data-balloon-pos="down-right"]:after {
     right: 0;
     margin-top: 10px;
     top: 100%;
     transform: translate(0, -4px); }
-  [data-balloon][data-balloon-pos="down-right"]:before {
+  [aria-label][data-balloon-pos="down-right"]:before {
     width: 0;
     height: 0;
     border: 5px solid transparent;
@@ -149,16 +152,16 @@ button[data-balloon] {
     right: 5px;
     top: 100%;
     transform: translate(0, -4px); }
-  [data-balloon][data-balloon-pos="down-right"]:hover:after, [data-balloon][data-balloon-pos="down-right"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="down-right"]:hover:after, [aria-label][data-balloon-pos="down-right"][data-balloon-visible]:after {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="down-right"]:hover:before, [data-balloon][data-balloon-pos="down-right"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="down-right"]:hover:before, [aria-label][data-balloon-pos="down-right"][data-balloon-visible]:before {
     transform: translate(0, 0); }
-  [data-balloon][data-balloon-pos="left"]:after {
+  [aria-label][data-balloon-pos="left"]:after {
     margin-right: 10px;
     right: 100%;
     top: 50%;
     transform: translate(4px, -50%); }
-  [data-balloon][data-balloon-pos="left"]:before {
+  [aria-label][data-balloon-pos="left"]:before {
     width: 0;
     height: 0;
     border: 5px solid transparent;
@@ -166,16 +169,16 @@ button[data-balloon] {
     right: 100%;
     top: 50%;
     transform: translate(4px, -50%); }
-  [data-balloon][data-balloon-pos="left"]:hover:after, [data-balloon][data-balloon-pos="left"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="left"]:hover:after, [aria-label][data-balloon-pos="left"][data-balloon-visible]:after {
     transform: translate(0, -50%); }
-  [data-balloon][data-balloon-pos="left"]:hover:before, [data-balloon][data-balloon-pos="left"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="left"]:hover:before, [aria-label][data-balloon-pos="left"][data-balloon-visible]:before {
     transform: translate(0, -50%); }
-  [data-balloon][data-balloon-pos="right"]:after {
+  [aria-label][data-balloon-pos="right"]:after {
     left: 100%;
     margin-left: 10px;
     top: 50%;
     transform: translate(-4px, -50%); }
-  [data-balloon][data-balloon-pos="right"]:before {
+  [aria-label][data-balloon-pos="right"]:before {
     width: 0;
     height: 0;
     border: 5px solid transparent;
@@ -183,26 +186,26 @@ button[data-balloon] {
     left: 100%;
     top: 50%;
     transform: translate(-4px, -50%); }
-  [data-balloon][data-balloon-pos="right"]:hover:after, [data-balloon][data-balloon-pos="right"][data-balloon-visible]:after {
+  [aria-label][data-balloon-pos="right"]:hover:after, [aria-label][data-balloon-pos="right"][data-balloon-visible]:after {
     transform: translate(0, -50%); }
-  [data-balloon][data-balloon-pos="right"]:hover:before, [data-balloon][data-balloon-pos="right"][data-balloon-visible]:before {
+  [aria-label][data-balloon-pos="right"]:hover:before, [aria-label][data-balloon-pos="right"][data-balloon-visible]:before {
     transform: translate(0, -50%); }
-  [data-balloon][data-balloon-length="small"]:after {
+  [aria-label][data-balloon-length="small"]:after {
     white-space: normal;
     width: 80px; }
-  [data-balloon][data-balloon-length="medium"]:after {
+  [aria-label][data-balloon-length="medium"]:after {
     white-space: normal;
     width: 150px; }
-  [data-balloon][data-balloon-length="large"]:after {
+  [aria-label][data-balloon-length="large"]:after {
     white-space: normal;
     width: 260px; }
-  [data-balloon][data-balloon-length="xlarge"]:after {
+  [aria-label][data-balloon-length="xlarge"]:after {
     white-space: normal;
     width: 380px; }
     @media screen and (max-width: 768px) {
-      [data-balloon][data-balloon-length="xlarge"]:after {
+      [aria-label][data-balloon-length="xlarge"]:after {
         white-space: normal;
         width: 90vw; } }
-  [data-balloon][data-balloon-length="fit"]:after {
+  [aria-label][data-balloon-length="fit"]:after {
     white-space: normal;
     width: 100%; }
