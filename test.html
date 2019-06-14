@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/balloon-css@0.5.1/balloon.min.css"> -->
   <link rel="stylesheet" href="balloon.min.css">
   <style>
     body {
       margin: 200px;
+    }
+
+    .btn-length {
+      width: 120px;
     }
   </style>
 </head>
@@ -25,6 +30,18 @@
   </p>
   <p>
     <button data-balloon="Hello World!" data-balloon-pos="down">Hover me!</button>
+  </p>
+  <p>
+    <button data-balloon="Hello World!" data-balloon-pos="up-right" class="btn-length">Hover me!</button>
+  </p>
+  <p>
+    <button data-balloon="Hello World!" data-balloon-pos="up-left" class="btn-length">Hover me!</button>
+  </p>
+  <p>
+    <button data-balloon="Hello World!" data-balloon-pos="down-right" class="btn-length">Hover me!</button>
+  </p>
+  <p>
+    <button data-balloon="Hello World!" data-balloon-pos="down-left" class="btn-length">Hover me!</button>
   </p>
 </body>
 </html>

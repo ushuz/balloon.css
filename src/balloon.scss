@@ -2,9 +2,10 @@
 // Variables
 // -----------------------------------------
 
-$balloon-bg:             fade-out(#111, .1) !default;
+$balloon-bg:             fade-out(#101010, .05) !default;
 $balloon-base-size:      10px !default;
-$balloon-arrow-size:   5px !default;
+$balloon-arrow-size:     5px !default;
+$balloon-move:           4px;
 
 
 //
@@ -109,13 +110,13 @@ button[data-balloon] {
         bottom: 100%;
         left: 50%;
         margin-bottom: 5px + $balloon-arrow-size;
-        transform: translate(-50%, 4px);
+        transform: translate(-50%, $balloon-move);
         transform-origin: top;
       }
       &:before {
         bottom: 100%;
         left: 50%;
-        transform: translate(-50%, 4px);
+        transform: translate(-50%, $balloon-move);
         transform-origin: top;
       }
 
@@ -152,13 +153,13 @@ button[data-balloon] {
       bottom: 100%;
       left: 50%;
       margin-bottom: 5px + $balloon-arrow-size;
-      transform: translate(-50%, 4px);
+      transform: translate(-50%, $balloon-move);
       transform-origin: top;
     }
     &:before {
       bottom: 100%;
       left: 50%;
-      transform: translate(-50%, 4px);
+      transform: translate(-50%, $balloon-move);
       transform-origin: top;
     }
 
@@ -178,13 +179,13 @@ button[data-balloon] {
       bottom: 100%;
       left: 0;
       margin-bottom: 5px + $balloon-arrow-size;
-      transform: translate(0, 4px);
+      transform: translate(0, $balloon-move);
       transform-origin: top;
     }
     &:before {
       bottom: 100%;
       left: 5px;
-      transform: translate(0, 4px);
+      transform: translate(0, $balloon-move);
       transform-origin: top;
     }
 
@@ -204,13 +205,13 @@ button[data-balloon] {
       bottom: 100%;
       right: 0;
       margin-bottom: 5px + $balloon-arrow-size;
-      transform: translate(0, 4px);
+      transform: translate(0, $balloon-move);
       transform-origin: top;
     }
     &:before {
       bottom: 100%;
       right: 5px;
-      transform: translate(0, 4px);
+      transform: translate(0, $balloon-move);
       transform-origin: top;
     }
 
@@ -230,7 +231,7 @@ button[data-balloon] {
       left: 50%;
       margin-top: 5px + $balloon-arrow-size;
       top: 100%;
-      transform: translate(-50%, -4px);
+      transform: translate(-50%, $balloon-move * -1);
     }
 
     &:before {
@@ -238,7 +239,7 @@ button[data-balloon] {
 
       left: 50%;
       top: 100%;
-      transform: translate(-50%, -4px);
+      transform: translate(-50%, $balloon-move * -1);
     }
 
     &:hover, &[data-balloon-visible] {
@@ -257,16 +258,15 @@ button[data-balloon] {
       left: 0;
       margin-top: 5px + $balloon-arrow-size;
       top: 100%;
-      transform: translate(0, -4px);
+      transform: translate(0, $balloon-move * -1);
     }
 
     &:before {
-      @include arrow-down();
+      @include arrow-up();
 
       left: 5px;
-      margin-top: 5px;
       top: 100%;
-      transform: translate(0, -4px);
+      transform: translate(0, $balloon-move * -1);
     }
 
     &:hover, &[data-balloon-visible] {
@@ -285,16 +285,15 @@ button[data-balloon] {
       right: 0;
       margin-top: 5px + $balloon-arrow-size;
       top: 100%;
-      transform: translate(0, -4px);
+      transform: translate(0, $balloon-move * -1);
     }
 
     &:before {
-      @include arrow-down();
+      @include arrow-up();
 
       right: 5px;
-      margin-top: 5px;
       top: 100%;
-      transform: translate(0, -4px);
+      transform: translate(0, $balloon-move * -1);
     }
 
     &:hover, &[data-balloon-visible] {
@@ -313,14 +312,14 @@ button[data-balloon] {
       margin-right: 5px + $balloon-arrow-size;
       right: 100%;
       top: 50%;
-      transform: translate(10px, -50%);
+      transform: translate($balloon-move, -50%);
     }
 
     &:before {
       @include arrow-right();
       right: 100%;
       top: 50%;
-      transform: translate(10px, -50%);
+      transform: translate($balloon-move, -50%);
     }
 
     &:hover, &[data-balloon-visible] {
@@ -341,14 +340,14 @@ button[data-balloon] {
       left: 100%;
       margin-left: 5px + $balloon-arrow-size;
       top: 50%;
-      transform: translate(-10px, -50%);
+      transform: translate($balloon-move * -1, -50%);
     }
 
     &:before {
       @include arrow-left();
       left: 100%;
       top: 50%;
-      transform: translate(-10px, -50%);
+      transform: translate($balloon-move * -1, -50%);
     }
 
     &:hover, &[data-balloon-visible] {
