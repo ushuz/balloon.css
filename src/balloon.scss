@@ -140,6 +140,12 @@ button[data-balloon] {
     &:after {
       white-space: pre;
     }
+
+    &[data-balloon-length] {
+      &:after {
+        white-space: pre-line;
+      }
+    }
   }
 
   &[data-balloon-blunt] {
