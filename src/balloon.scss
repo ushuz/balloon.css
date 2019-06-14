@@ -145,6 +145,7 @@ button[aria-label] {
     &[data-balloon-length] {
       &:after {
         white-space: pre-line;
+        word-break: break-word;
       }
     }
   }
