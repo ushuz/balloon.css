@@ -16,7 +16,8 @@
   ],
   "main": "balloon.min.css",
   "scripts": {
-    "build": "node-sass src/balloon.scss ./balloon.css && node-sass src/balloon.scss ./balloon.min.css --output-style compressed"
+    "build": "node-sass src/balloon.scss ./balloon.css && node-sass src/balloon.scss ./balloon.min.css --output-style compressed",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "node-sass": "^4.10"
