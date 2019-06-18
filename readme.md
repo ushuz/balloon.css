@@ -41,7 +41,7 @@ or import the source file if using SASS/SCSS:
 
 ```sass
 /* Your main.scss file, etc. */
-@import "~balloon-css/src/balloon";
+@import "~balloon-css/src/balloon"
 ```
 
 **CDN version:**
