@@ -82,27 +82,29 @@ button[aria-label] {
   // More info at: https://goo.gl/w8JF4W
   cursor: pointer;
 
-  &:after {
-    @include base-effects();
-    @include normalized-text();
+  &[data-balloon-pos] {
+    &:after {
+      @include base-effects();
+      @include normalized-text();
 
-    background: var(--balloon-color);
-    border-radius: 2px;
-    color: #fff;
-    content: attr(aria-label);
-    padding: .5em 1em;
-    position: absolute;
-    white-space: nowrap;
-    z-index: 10;
-  }
+      background: var(--balloon-color);
+      border-radius: 2px;
+      color: #fff;
+      content: attr(aria-label);
+      padding: .5em 1em;
+      position: absolute;
+      white-space: nowrap;
+      z-index: 10;
+    }
 
-  &:before {
-    @include arrow-down();
-    @include base-effects();
+    &:before {
+      @include arrow-down();
+      @include base-effects();
 
-    content: "";
-    position: absolute;
-    z-index: 10;
+      content: "";
+      position: absolute;
+      z-index: 10;
+    }
   }
 
   &:hover, &[data-balloon-visible], &:not([data-balloon-nofocus]):focus {
@@ -110,32 +112,6 @@ button[aria-label] {
     &:after {
       opacity: 1;      
       pointer-events: none;
-    }
-  }
-  
-  &:not([data-balloon-pos]) {
-    &:after {
-      bottom: 100%;
-      left: 50%;
-      margin-bottom: $balloon-arrow-size + 5px;;
-      transform: translate(-50%, var(--balloon-move));
-      transform-origin: top;
-    }
-    &:before {
-      bottom: 100%;
-      left: 50%;
-      transform: translate(-50%, var(--balloon-move));
-      transform-origin: top;
-    }
-
-    &:hover, &[data-balloon-visible] {
-      &:after {
-        transform: translate(-50%, 0);
-      }
-
-      &:before {
-        transform: translate(-50%, 0);
-      }
     }
   }
 
