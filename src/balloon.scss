@@ -72,17 +72,19 @@ $balloon-move:           4px !default;
 
 // IE 11 button bugfix
 button[aria-label] {
-  overflow: visible;
+  &[data-balloon-pos] {
+    overflow: visible;
+  }
 }
 
 [aria-label] {
-  position: relative; // alt. absolute or fixed
-
-  // Fixing iOS Safari event issue.
-  // More info at: https://goo.gl/w8JF4W
-  cursor: pointer;
-
   &[data-balloon-pos] {
+    position: relative; // alt. absolute or fixed
+
+    // Fixing iOS Safari event issue.
+    // More info at: https://goo.gl/w8JF4W
+    cursor: pointer;
+
     &:after {
       @include base-effects();
       @include normalized-text();
