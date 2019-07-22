@@ -1,6 +1,6 @@
 {
   "name": "balloon-css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple tooltips made of pure CSS",
   "author": "Claudio Holanda",
   "license": "MIT",
@@ -20,6 +20,6 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "node-sass": "^4.10"
+    "node-sass": "^4.12"
   }
 }
