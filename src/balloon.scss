@@ -65,6 +65,7 @@ $balloon-move:           4px !default;
 // -----------------------------------------
 
 :root {
+  --balloon-border-radius: 2px;
   --balloon-color: #{$balloon-bg};
   --balloon-font-size: #{$balloon-base-size};
   --balloon-move: #{$balloon-move};
@@ -90,7 +91,7 @@ button[aria-label] {
       @include normalized-text();
 
       background: var(--balloon-color);
-      border-radius: 2px;
+      border-radius: var(--balloon-border-radius);
       color: #fff;
       content: attr(aria-label);
       padding: .5em 1em;
@@ -111,7 +112,7 @@ button[aria-label] {
     &:hover, &[data-balloon-visible], &:not([data-balloon-nofocus]):focus {
       &:before,
       &:after {
-        opacity: 1;      
+        opacity: 1;
         pointer-events: none;
       }
     }
