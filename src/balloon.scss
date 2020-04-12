@@ -17,6 +17,7 @@
 
 :root {
   --balloon-color: #{$balloon-bg};
+  --balloon-foreground-color: #fff;
   --balloon-font-size: #{$balloon-base-size};
   --balloon-move: #{$balloon-move};
 }
@@ -42,7 +43,7 @@ button[aria-label] {
 
       background: var(--balloon-color);
       border-radius: 2px;
-      color: #fff;
+      color: var(--balloon-foreground-color);
       content: attr(aria-label);
       padding: .5em 1em;
       position: absolute;
