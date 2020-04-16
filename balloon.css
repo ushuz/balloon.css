@@ -1,6 +1,6 @@
 :root {
   --balloon-color: rgba(16, 16, 16, 0.95);
-  --balloon-foreground-color: #fff;
+  --balloon-text-color: #fff;
   --balloon-font-size: 12px;
   --balloon-move: 4px; }
 
