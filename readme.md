@@ -96,7 +96,14 @@ If for some reason you do not want animations in your tooltips, you can use the 
 
 ### Customizing Tooltips
 
-Balloon.css exposes three CSS variables to make it easier to customize tooltips: `--balloon-color`, `--balloon-font-size` and `--balloon-move`. This way you can use custom CSS to make your own tooltip styles:
+Balloon.css exposes CSS variables to make it easier to customize tooltips:
+
+- `--balloon-border-radius`
+- `--balloon-color`
+- `--balloon-font-size`
+- `--balloon-move`
+
+This way, you can use custom CSS to make your own tooltip styles:
 
 ```css
 /* Add this to your CSS */
@@ -116,8 +123,9 @@ Balloon.css exposes three CSS variables to make it easier to customize tooltips:
 If you want to customize tooltips globally, use the `:root` selector:
 
 ```css
-/* All tooltips would now be blue */
+/* All tooltips would now be square and blue */
 :root {
+  --balloon-border-radius: 0;
   --balloon-color: blue;
 }
 ```

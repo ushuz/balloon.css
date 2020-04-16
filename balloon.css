@@ -1,4 +1,5 @@
 :root {
+  --balloon-border-radius: 2px;
   --balloon-color: rgba(16, 16, 16, 0.95);
   --balloon-text-color: #fff;
   --balloon-font-size: 12px;
@@ -21,7 +22,7 @@ button[aria-label][data-balloon-pos] {
     text-shadow: none;
     font-size: var(--balloon-font-size);
     background: var(--balloon-color);
-    border-radius: 2px;
+    border-radius: var(--balloon-border-radius);
     color: var(--balloon-foreground-color);
     content: attr(aria-label);
     padding: .5em 1em;
