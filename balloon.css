@@ -22,8 +22,9 @@ button[aria-label][data-balloon-pos] {
     text-shadow: none;
     font-size: var(--balloon-font-size);
     background: var(--balloon-color);
+    border-radius: 2px;
+    color: var(--balloon-text-color);
     border-radius: var(--balloon-border-radius);
-    color: var(--balloon-foreground-color);
     content: attr(aria-label);
     padding: .5em 1em;
     position: absolute;
