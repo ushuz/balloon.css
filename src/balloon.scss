@@ -18,7 +18,7 @@
 :root {
   --balloon-border-radius: 2px;
   --balloon-color: #{$balloon-bg};
-  --balloon-text-color: #fff;
+  --balloon-text-color: #{$balloon-text-color};
   --balloon-font-size: #{$balloon-base-size};
   --balloon-move: #{$balloon-move};
 }
