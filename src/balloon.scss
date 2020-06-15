@@ -54,7 +54,7 @@ button[aria-label] {
     }
 
     &:before {
-      @include arrow-down();
+      @include arrow(down);
       @include base-effects();
 
       content: "";
@@ -181,7 +181,7 @@ button[aria-label] {
       }
 
       &:before {
-        @include arrow-up();
+        @include arrow(up);
 
         left: 50%;
         top: 100%;
@@ -208,7 +208,7 @@ button[aria-label] {
       }
 
       &:before {
-        @include arrow-up();
+        @include arrow(up);
 
         left: 5px;
         top: 100%;
@@ -235,7 +235,7 @@ button[aria-label] {
       }
 
       &:before {
-        @include arrow-up();
+        @include arrow(up);
 
         right: 5px;
         top: 100%;
@@ -262,7 +262,7 @@ button[aria-label] {
       }
 
       &:before {
-        @include arrow-right();
+        @include arrow(right);
 
         right: 100%;
         top: 50%;
@@ -291,7 +291,7 @@ button[aria-label] {
       }
 
       &:before {
-        @include arrow-left();
+        @include arrow(left);
 
         left: 100%;
         top: 50%;
