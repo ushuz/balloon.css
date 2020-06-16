@@ -7,7 +7,7 @@ $ARROW_DIRECTIONS: (
 
 @mixin arrow($direction) {
   @if not map-has-key($ARROW_DIRECTIONS, $direction) {
-    @error '[balloon] The $direction parameter most be one of: `#{map-keys($DIRECTIONS)}, `#{$direction}` was given.';
+    @error '[balloon] The $direction parameter must be one of: `#{map-keys($DIRECTIONS)}, `#{$direction}` was given.';
   }
 
   width: 0;
