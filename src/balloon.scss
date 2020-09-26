@@ -112,7 +112,7 @@ button[aria-label] {
       &:before { right: 5px; }
     }
 
-    &[data-balloon-po*="-left"],
+    &[data-balloon-pos*="-left"],
     &[data-balloon-pos*="-right"] {
       &:hover, &[data-balloon-visible] {
         &:after { transform: translate(0, 0); }
