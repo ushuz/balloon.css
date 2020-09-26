@@ -19,7 +19,7 @@ $ARROW_DIRECTIONS: (
 @mixin base-effects() {
   opacity: 0;
   pointer-events: none;
-  transition: all 0.18s ease-out 0.18s;
+  transition: opacity .18s ease-out .18s, transform .18s ease-out .18s;
 }
 
 @mixin no-effects() {
